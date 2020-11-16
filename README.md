@@ -23,4 +23,4 @@
 - git add
 - git commit -m
 
-- 실험용 
+- 다아시 해야한다.
