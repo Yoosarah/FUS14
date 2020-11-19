@@ -60,5 +60,37 @@ a img {
   }
   /*헤더 디자인*/
   .app-header{
-    background-color: yellow;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #f5f4fb;
+  }
+  /* 브랜드 로고 */
+  .brand{
+    margin:0;
+    padding:2px;
+    line-height: 16px; /* h1는 기본적으로 라인 하이트가 있어서 위에 뜬 부분을 줄이고 싶으면 조절하면 된다. */
+  }
+  .brand a{
+  display:block;
+  padding:30px ;
+}
+  /* .respons{
+    max-width:100%;
+    height: auto;
+  }*/
+
+  .is-open-menu{
+    background-color:white;
+    padding:33px 28px;
+    justify-content:flex-end; 
+    margin:0px;
+  }
+  
+  .is-open-menu .ir{
+    display:inline-block;
+    background-image:url(./../images/navigation-button.gif);
+    width: 26px;
+    height: 22px;
   }
