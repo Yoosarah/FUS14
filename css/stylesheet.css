@@ -1,0 +1,64 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+::-moz-selection {
+  background: #233d84;
+  color: #ffffff;
+}
+
+::selection {
+  background: #233d84;
+  color: #ffffff;
+} /*드래그했을 때 색깔 달라지는 디자인상 재미 요소, 셀렉션이라는 선택자에 컬러를 적용해줘서다. */
+html{
+  font-size: 10px;
+}
+
+body * {
+  -webkit-tap-highlight-color: rgba(255, 255, 200, 0.3);
+  tap-highlight-color: rgba(255, 255, 200, 0.3);
+} /*전체 선택자. body * <- 이게 전체 선택자다. */
+
+body {
+  margin: 0;
+  /* max-width: 840px; /*840이상은 커질 수 없다.*/
+  min-height: 100vh; 
+  font-family: 'Spoqa Han Sans','Sans-serif';
+  font-size: 1.6rem;
+}
+
+nav a { 
+  color: inherit;/*상속받은 값 사용*/
+  text-decoration: none; /*텍스트 데코레이션 안쓴다!*/
+}
+
+a img {
+  vertical-align: middle; /*이미지는 디센더 갭이 발생하는데, 버티컬 얼라인으로 조절하는 팁이다.*/
+}
+
+
+/* --------------------------------------------
+  * 공통 클래스 */
+  .reset-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .button {
+    cursor: pointer;
+    border: none;
+  }
+  
+  .a11y-hidden {
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path:polygon(0 0,0 0,0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  /*헤더 디자인*/
+  .app-header{
+    background-color: yellow;
+  }
