@@ -76,21 +76,101 @@ a img {
   display:block;
   padding:30px ;
 }
-  /* .respons{
-    max-width:100%;
-    height: auto;
-  }*/
-
   .is-open-menu{
     background-color:white;
     padding:33px 28px;
     justify-content:flex-end; 
     margin:0px;
   }
-  
+
   .is-open-menu .ir{
     display:inline-block;
     background-image:url(./../images/navigation-button.gif);
     width: 26px;
     height: 22px;
+  }
+
+  /*헤더 강사님 요약본 배꼈던 버전*/
+  /* 내가 메뉴 시도해본 것 주석처리 */
+
+  /*내비게이션*/
+  /* .app-navigation{
+    background-color:rgba(0, 0, 77, 0.63);
+    color:white;
+    font-size:16pt;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    display:flex;
+  }
+
+  .app-navigation .reset-list{
+    padding-inline-start:20px;
+    padding-top: 75px;
+  }
+
+  .app-navigation .reset-list li{
+    border-bottom: 1px solid #F5F4FB;
+    padding-bottom: 11px;
+    padding-top: 10px;
+  }
+.is-close-menu{
+  justify-self: flex-end;
+  margin:0px;
+  height:50px;
+  padding: 18px;
+  background-color: green;
+}
+
+.close{
+  position:50% 50%;
+  background-color:rgba(255, 0, 0, 0);
+  color:white;
+} */
+
+
+  .app-navigation{ 
+    background: hsla(225, 57%, 10%, 0.9);
+    color:white;
+    font-size:16pt;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0; /*패딩을 주려면 width,height값을 주지 않는게 적절, 위드 헤이트 주고 싶으면 마진으로 줄 수 있음*/
+    bottom:0;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* column이 아니라 row를 쓰기 때문에 100%를 넘겨서 줄바꿈 하는 형식으로*/
+    justify-content: flex-end;
+    align-content: flex-start; /*메뉴들을 위쪽으로 보내기 위해서.*/
+    align-items: flex-start; /*strecth 기본값을 쓰면 X 버튼이 세로로 늘어나서*/
+    padding : 10px;
+  } 
+  .is-close-menu{
+    order: -1; /*닫기 버튼을 맨 위로 보내기 위해서 */
+    background-color: transparent;
+    padding:18px;
+  }
+  .app-navigation ul{
+    margin-top:10px;
+  
+    width:100%;
+  }
+  .app-navigation li{
+    border-bottom: 1px solid#F5F5F5; /*li에다 만든 이유는 선에다까지 링크 걸기 싫어서*/
+  }
+  .app-navigation a{
+    display:block; /*인라인 요소를 블록으로 만들어야 이것저것 꾸밀 수 있다. */
+   padding:10px; 
+   transition: all 0.4s ease;
+  }
+  .app-navigation a:hover,
+  .app-navigation a:focus {
+    background: #2e437c;
+  } /*a위에 호버링되거나, 포커싱 되면 색깔을 바꾸라는 지시, 애니메이션 효과를 주고 싶으면 주고 싶은 곳에 transition: all 0.4s ease; */
+  .is-close-menu .close{
+    color:white;
+    font-size:14pt;
   }
