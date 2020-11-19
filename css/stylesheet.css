@@ -147,12 +147,20 @@ a img {
     align-content: flex-start; /*메뉴들을 위쪽으로 보내기 위해서.*/
     align-items: flex-start; /*strecth 기본값을 쓰면 X 버튼이 세로로 늘어나서*/
     padding : 10px;
+
+    transition: all 0.6s cubic-bezier(0.66, -0.01, 0.3, 0.99);
+    transform: translateX(105vw); /*앱내비를 첫 화면부터 보이는 걸 막기 위해서, 왼쪽 바깥으로 나가서 화면에 안보이는 것처럼 느껴지는 것*/
   } 
   .is-close-menu{
     order: -1; /*닫기 버튼을 맨 위로 보내기 위해서 */
     background-color: transparent;
     padding:18px;
   }
+
+  .app-navigation.is-active {
+    transform: translateX(0);
+  } /*메뉴 버튼이 눌리면 네비게이션이 다시 돌아오라는 뜻*/
+
   .app-navigation ul{
     margin-top:10px;
   
