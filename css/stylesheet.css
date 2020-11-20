@@ -186,28 +186,62 @@ a img {
   /* 메인콘텐츠 */
   .app-main{
    background-color: yellow;
-   display:flex;
+   margin-right: auto;
+   margin-left: auto;
    flex-wrap:wrap;
-   justify-content: center;
-   align-items: flex-start;
+   /* flex-wrap: wrap; column이 아니라 row를 쓰기 때문에 100%를 넘겨서 줄바꿈 하는 형식으로 */
   }
-.ediya-menu figure{
   
+  .ediya-menu{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+  .ediya-menu__item{
+    justify-content: center;
+    display: flex;
+    background-color: gray;
+    margin:auto;
+    width:70%;
+    min-width:70%;
+    height:auto;
+  }
+
+.ediya-menu figure{
+  background-color: lime;
+  justify-content: center;
 }
 
 .ediya-menu img{
+  justify-content: center;
   /* background-color: gray; 부모 크기에 따라 크기를 줄였다 늘였다 하고 싶으면 max-width: 100%; height:auto;라고 설정.  */
   border:1px solid red;
+  /* padding:30px 50px 70px 50px; */
   max-width: 100%;
   height: auto;
 }
 
 
   /* 미디어 쿼리 규칙, 저 조건이 만족되었을 때만 수행하는 app-main 상태, 이 경우 조건은 최대 너비가 768일것. */
-  @media all and (max-width: 768px) {
+  @media all and (min-width: 768px) {
     .app-main {
       background-color: pink;
       margin-left: auto;
       margin-right: auto;
+      
+    }
+    .ediya-menu{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content: center;
+    }
+     
+    .ediya-menu__item{
+      flex-wrap:wrap;
+    justify-content: center;
+    margin:0px;
+    background-color: blue;
     }
   }
