@@ -65,6 +65,9 @@ a img {
     align-items: center;
     background-color: white;
     border-bottom: 1px solid #f5f4fb;
+    position: sticky;
+    top:0;
+    z-index:500;
   }
   /* 브랜드 로고 */
   .brand{
@@ -147,6 +150,7 @@ a img {
     align-content: flex-start; /*메뉴들을 위쪽으로 보내기 위해서.*/
     align-items: flex-start; /*strecth 기본값을 쓰면 X 버튼이 세로로 늘어나서*/
     padding : 10px;
+    z-index:500;
 
     transition: all 0.6s cubic-bezier(0.66, -0.01, 0.3, 0.99);
     transform: translateX(105vw); /*앱내비를 첫 화면부터 보이는 걸 막기 위해서, 왼쪽 바깥으로 나가서 화면에 안보이는 것처럼 느껴지는 것*/
@@ -163,7 +167,6 @@ a img {
 
   .app-navigation ul{
     margin-top:10px;
-  
     width:100%;
   }
   .app-navigation li{
@@ -197,11 +200,14 @@ a img {
     flex-direction:row;
     flex-wrap:wrap;
     align-items:stretch;
+    
   }
 
   .ediya-menu__item{
     background-color:#F5F5F5;
     width: 100%;
+    position: relative;
+    
   }
 .ediya-menu__item:nth-child(n+2){
   margin-top:20px;
@@ -214,11 +220,13 @@ a img {
   padding-bottom: 40px;
   color:inherit;
   text-decoration: none;
+  
 } 
 /* a를 지정한 이유는 메뉴를 클릭할 때 영역 터치가 쉬워야하니까. 블록을 주는 것도 동일한 이유. */
 
 .ediya-menu figure{
   margin:0px;
+  
 }
 
 .ediya-menu img{
@@ -234,17 +242,82 @@ a img {
 {
   transform:scale(1);
 }
+/*음료 상세 정보*/
 
+.ediya-menu__item--detail{
+  background-color: rgba(204, 204, 204, 0.5);
+  border: 1px solid gray;
+  text-decoration: inherit;
+  position: absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  bottom:0px;
+  padding:30px 20px;
+}
+
+
+.ediya-menu__item--name{
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin:0px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+.ediya-menu__item--name span{
+  display: block; 
+  font-size: 14px;
+  color:#999999;
+  font-weight: 300;
+} /*디스플레이 블록으로 하면 2줄로 내려와있다. why?*/
+
+.ediya-menu__item--detail p{
+  font-size: 16px;
+}
+
+.ediya-menu__item--multi-column{
+column-count: 2;
+column-rule: 1px solid black;
+padding :20px 20px 10px;
+position: absolute;
+right: 0px;
+left: 0px;
+bottom: 0px;
+background-color: rgba(255,255,255,0.5);
+}
+
+.ediya-menu__item--multi-column dl{
+  margin: 0px;
+  font-size: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 인라인-블록 사이를 넘나들다보니까 공백문자가 발생해 텍스트 정렬이 어려워졌었다. 그래서 여기서 폰트 0주고 다시 자식에서 폰트 크기 줘서 공백은 0만들고 의미있는 값만 폰트 사이즈를 주는 것. */
+
+.ediya-menu__item--multi-column dt,
+.ediya-menu__item--multi-column dd{
+  width:50%; 
+  font-size: 1.3rem;
+  margin: 0px;
+}
+
+.is-close-panel{
+  background-color:transparent;
+
+  position: absolute;
+  top:16px;
+  right:14px;
+}
 
   /* 미디어 쿼리 규칙, 저 조건이 만족되었을 때만 수행하는 app-main 상태, 이 경우 조건은 최소 너비가 768이상 일것. */
   @media all and (min-width: 768px) {
 
     .ediya-menu{
-      width:526px;
+      width:89.84375%;
       justify-content: space-between;
     }
     .ediya-menu__item{
-      width:248px;
+      width:47.826087%;
     }
     .ediya-menu__item:nth-child(2){
       margin-top: 0px;
