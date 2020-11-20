@@ -1,0 +1,49 @@
+@keyframes opacity-effect{
+    0%{opacity:1 ;}
+    100%{opacity: 0;}   
+}
+/* 0%는 프롬, 여기서부터, 100%는 투, 여기까지라는 뜻이다. */
+/* 키프레임은 선언할 뿐이다. 가져다 사용해야 적용이 된다.  */
+.oppacity-effect{
+    border:5px solid blue;
+    display: flex;
+
+}
+
+.oppacity-effect img{
+    width: 12.5%;
+    animation-name: opacity-effect;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    opacity: 0;
+}
+
+
+.img2{
+    animation-delay: 300ms;
+}
+.img3{
+    animation-delay: 450ms;
+}
+.img4{
+    animation-delay: 600ms;
+}
+.img5{
+    animation-delay: 750ms;
+}
+.img6{
+    animation-delay: 900ms;
+}
+.img7{
+    animation-delay: 1050ms;
+}
+.img8{
+    animation-delay: 1300ms;
+}
+
+/* 애니메이션에는 name, duration 2가지 태그가 반드시 필요하다.  */
+/* fill-mode : forward하면 사라져서 안돌아온다.
+    direction을 조정하면 키프레임 부분을 건드리지 않아도 거꾸로 돌리거나, 번갈아 나오게 하거나 조정할 수 있다*/
+/* delay : 애니메이션 시작을 느리게 하는 것. */
+/*  */
